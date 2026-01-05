@@ -1,0 +1,37 @@
+@use "../../../default/base/variables" as var;
+
+@media #{var.$tablet} {
+  .footer {
+    padding: 30rem 28rem;
+  }
+
+  .footer-content {
+    gap: 12rem;
+    padding-bottom: 12rem;
+    margin-bottom: 60rem;
+
+    &::before {
+      max-width: 150rem;
+    }
+  }
+
+  .footer-nav {
+    margin-bottom: 60rem;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 30rem;
+    padding-left: 30rem;
+    margin-left: unset;
+    list-style-type: disc;
+
+    &__url {
+      font-size: 20rem;
+    }
+  }
+
+  .footer-copyright {
+    font-size: 14rem;
+  }
+}
