@@ -1,0 +1,60 @@
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40rem;
+  padding-inline: 90rem;
+}
+
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  gap: 62rem;
+}
+
+.contacts-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  font-family: var(--montserrat);
+}
+
+.contacts-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+
+  &__item {
+    font-family: var(--montserrat);
+    font-size: 32rem;
+
+    &--small {
+      font-size: 28rem;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 16rem;
+
+  &__item,
+  &__link {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__icon {
+    width: 40rem;
+    height: 40rem;
+  }
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  max-width: 520rem;
+  width: 100%;
+}

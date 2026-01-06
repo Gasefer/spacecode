@@ -8,4 +8,15 @@
   body {
     font-size: 16rem;
   }
+
+  .container {
+    padding-inline: 0;
+  }
+
+  .button {
+    min-width: auto;
+    min-height: 40rem;
+    font-size: 16rem;
+    font-weight: 500;
+  }
 }
