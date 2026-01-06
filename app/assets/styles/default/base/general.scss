@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--roboto);
   font-size: 20rem;
   font-style: normal;
   font-weight: 400;
@@ -44,4 +44,28 @@ a {
 
 .highlight {
   color: var(--highlight);
+}
+
+.button {
+  position: relative;
+  min-width: 230rem;
+  min-height: 60rem;
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+
+  &:hover {
+    &::before {
+      border-width: 4px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--highlight);
+    pointer-events: none;
+    transition: border-width 0.15s ease;
+  }
 }

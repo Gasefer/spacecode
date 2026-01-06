@@ -1,0 +1,21 @@
+@use "../../../default/base/variables" as var;
+
+@media #{var.$tablet} {
+  .contacts {
+    flex-direction: column;
+    padding-inline: 28rem;
+  }
+
+  .contacts-info {
+    gap: 40rem;
+  }
+
+  .contacts-links {
+    gap: 10rem;
+    
+    &__item {
+      min-height: 40rem;
+      font-size: 24rem;
+    }
+  }
+}
