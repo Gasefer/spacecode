@@ -1,36 +1,45 @@
-<script setup lang="ts">
+<script setup>
 // imports
 import { useField } from "vee-validate";
 
 // emits
-const emit = defineEmits<{
-  "update:modelValue": [value: string | number];
-}>();
+const emit = defineEmits(["update:modelValue"]);
 
 // props
-const props = withDefaults(
-  defineProps<{
-    modelValue: string | number;
-    customClass?: string;
-    autocomplete?: string;
-    label?: string;
-    name: string;
-    placeholder?: string;
-    type?:
-      | "phone"
-      | "text";
-  }>(),
-  {
-    customClass: "",
-    label: "",
-    placeholder: "",
-    type: "text",
-  }
-);
+const props = defineProps({
+  modelValue: {
+    type: [String, Number],
+    default: "",
+  },
+  autocomplete: {
+    type: String,
+    default: "",
+  },
+  customClass: {
+    type: String,
+    default: "",
+  },
+  label: {
+    type: String,
+    default: "",
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  placeholder: {
+    type: String,
+    default: "",
+  },
+  type: {
+    type: String,
+    default: "text",
+  },
+})
 
 // variables
 const nameRef = toRef(props, "name");
-const input = ref<HTMLInputElement | null>(null);
+const input = ref(null);
 const { errorMessage, meta } = useField(nameRef, undefined, {
   initialValue: props.modelValue,
 });
@@ -57,7 +66,7 @@ const { errorMessage, meta } = useField(nameRef, undefined, {
         :name="nameRef"
         :placeholder="placeholder"
         :value="modelValue"
-        @input="emit('update:modelValue', ($event.target as HTMLInputElement).value)"
+        @input="emit('update:modelValue', $event.target.value)"
       />
     <p
       v-if="errorMessage"

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
   const currentDate = new Date(); 
 const currentYear = currentDate.getFullYear();
 </script>

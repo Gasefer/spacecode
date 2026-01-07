@@ -1,15 +1,22 @@
-<script setup lang="ts">
-withDefaults(
-  defineProps<{
-    name: string;
-    customClass?: string;
-    width: number | string;
-    height: number | string;
-  }>(),
-  {
-    customClass: "",
-  }
-);
+<script setup>
+defineProps({
+  name: {
+    type: String,
+    required: true,
+  },
+  customClass: {
+    type: String,
+    default: "",
+  },
+  width: {
+    type: [Number, String],
+    required: true,
+  },
+  height: {
+    type: [Number, String],
+    required: true,
+  },
+});
 </script>
 
 <template>

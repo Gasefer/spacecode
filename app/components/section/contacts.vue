@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
   // imports
   import { Form } from "vee-validate";
 

@@ -68,4 +68,8 @@ a {
     pointer-events: none;
     transition: border-width 0.15s ease;
   }
+
+  &--right {
+    margin-left: auto;
+  }
 }

@@ -1,4 +1,4 @@
-<script setup lang="ts"></script>
+<script setup></script>
 <template>
   <svg class="star-icon" viewBox="0 0 254 251" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g filter="url(#filter0_f_49_59)">
