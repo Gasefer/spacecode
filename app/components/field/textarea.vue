@@ -1,20 +1,30 @@
-<script setup lang="ts">
+<script setup>
 // imports
 import { useField } from "vee-validate";
 
-// emits
-const emit = defineEmits<{
-  "update:modelValue": [value: string];
-}>();
-
 // props
-const props = defineProps<{
-  modelValue: string;
-  customClass?: string;
-  label?: string;
-  name: string;
-  placeholder?: string;
-}>();
+const props = defineProps({
+  modelValue: {
+    type: [String, Number],
+    default: "",
+  },
+  customClass: {
+    type: String,
+    default: "",
+  },
+  label: {
+    type: String,
+    default: "",
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  placeholder: {
+    type: String,
+    default: "",
+  },
+});
 
 // varables
 const nameRef = toRef(props, "name");
