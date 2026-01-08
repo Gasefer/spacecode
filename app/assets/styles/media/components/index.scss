@@ -1,5 +1,13 @@
+// ui
 @use "ui/logo";
 @use "ui/title";
+
+// layouts
 @use "layouts/footer";
+
+// section
 @use "section/contacts";
 @use "section/prices";
+
+// modal
+@use "modal/contact";

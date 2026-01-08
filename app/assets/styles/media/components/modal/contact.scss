@@ -1,0 +1,23 @@
+@use "../../../default/base/variables" as var;
+
+@media #{var.$tablet} {
+  .modal {
+    max-width: 328rem;
+    padding: 5rem 12rem 24rem;
+
+    &__header {
+      flex-direction: column-reverse;
+      margin-bottom: 30rem;
+    }
+
+    &__title {
+      padding-top: 0;
+      font-size: 20rem;
+    }
+
+    &__close {
+      padding: 8rem;
+      margin-left: auto;
+    }
+  }
+}
