@@ -1,9 +1,20 @@
+// ui
 @use "ui/logo";
 @use "ui/star";
 @use "ui/title";
 @use "ui/swiper";
+
+// field
 @use "field/input";
 @use "field/textarea";
+
+// modal
+@use "modal/wrapper";
+@use "modal/contact";
+
+// layouts
 @use "layouts/footer";
+
+// section
 @use "section/contacts";
 @use "section/prices";

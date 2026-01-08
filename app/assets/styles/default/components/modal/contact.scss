@@ -1,0 +1,49 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1000rem;
+  width: 100%;
+  max-height: calc(100lvh - 32rem);
+  padding: 40rem 40rem 80rem;
+  overflow: auto;
+  background-color: var(--bg2);
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60rem;
+  }
+
+  &__title {
+    padding-top: 40rem;
+    font-family: var(--montserrat);
+    font-size: 32rem;
+  }
+
+  &__close {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+  }
+
+  &__icon {
+    width: 24rem;
+    height: 24rem;
+  }
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  max-width: 520rem;
+  width: 100%;
+
+  &--modal {
+    max-width: none;
+  }
+}

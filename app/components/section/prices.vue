@@ -2,6 +2,9 @@
 // global variables
 const { windowWidth } = useWindowWidth();
 
+// emits
+const emit = defineEmits(["openContacts"]);
+
 // variables
 const slides = [
   {
@@ -60,7 +63,7 @@ const swiperOptions = {
           </span>
         </li>
       </ul>
-      <button class="button button--right">Консультуватись</button>
+      <button class="button button--right" @click="emit('openContacts')">Консультуватись</button>
     </template>
     <UiSwiper
       v-else
