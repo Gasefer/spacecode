@@ -1,0 +1,21 @@
+@use "../../../default/base/variables" as var;
+
+@media #{var.$tablet} {
+  .stack {
+    margin-bottom: 90rem;
+
+    &__marquee {
+      margin-bottom: 0;
+    }
+
+    &__btn-wrapper {
+      display: none;
+    }
+
+    .marquee-list {
+      gap: 24rem;
+      padding: 30rem 0 30rem 26rem;
+      font-size: 16rem;
+    }
+  }
+}

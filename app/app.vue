@@ -19,6 +19,7 @@ function toggleModal(modal, open) {
 <template>
   <div class="page-wrapper">
     <main class="main">
+      <SectionStack @open-contacts="toggleModal('contacts', true)"/>
       <SectionProcess/>
       <SectionPrices @open-contacts="toggleModal('contacts', true)"/>
       <SectionContacts/>

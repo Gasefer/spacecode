@@ -1,0 +1,21 @@
+.stack {
+  margin-bottom: 100rem;
+
+  &__marquee {
+    margin-bottom: 50rem;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.marquee-list {
+  display: flex;
+  flex-direction: row;
+  gap: 50rem;
+  padding: 32rem 0 32rem 50rem;
+  font-family: var(--montserrat);
+  font-size: 28rem;
+}
