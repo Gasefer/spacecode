@@ -1,0 +1,32 @@
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--grey);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: var(--marquee-gap);
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.is-animating {
+  /* linear timing is crucial for constant speed */
+  animation: scroll var(--marquee-duration) linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Translate exactly the width of one set of content + the gap */
+    transform: translateX(calc(-50% - (var(--marquee-gap) / 2)));
+  }
+}

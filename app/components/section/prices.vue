@@ -63,7 +63,9 @@ const swiperOptions = {
           </span>
         </li>
       </ul>
-      <button class="button button--right" @click="emit('openContacts')">Консультуватись</button>
+      <button class="button button--right" @click="emit('openContacts')">
+        Консультуватись
+      </button>
     </template>
     <UiSwiper
       v-else
