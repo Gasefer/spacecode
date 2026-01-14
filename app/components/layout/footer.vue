@@ -6,7 +6,7 @@ const currentYear = currentDate.getFullYear();
   <footer class="footer">
     <div class="footer-content">
       <UiLogo class="footer-logo"/>
-      <p>Створюємо системи, які працюють</p>
+      <p class="footer__desc">Створюємо системи, які працюють</p>
     </div>
     <nav class="footer-nav">
       <ul class="footer-links">

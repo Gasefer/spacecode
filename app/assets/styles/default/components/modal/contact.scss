@@ -6,7 +6,7 @@
   max-width: 1000rem;
   width: 100%;
   max-height: calc(100lvh - 32rem);
-  padding: 40rem 40rem 80rem;
+  padding: 40rem 40rem 110rem;
   overflow: auto;
   background-color: var(--bg2);
 
@@ -15,6 +15,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    padding-left: 60rem;
     margin-bottom: 60rem;
   }
 
@@ -45,5 +46,6 @@
 
   &--modal {
     max-width: none;
+    padding-inline: 60rem;
   }
 }

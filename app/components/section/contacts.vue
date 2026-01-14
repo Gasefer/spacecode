@@ -10,7 +10,7 @@
         </div>
         <div class="contacts-links">
           <NuxtLink to="mailto:email@com.ua" class="contacts-links__item">email@com.ua</NuxtLink>
-          <NuxtLink to="tel:+380995488323" class="contacts-links__item contacts-links__item--small">+380995488323</NuxtLink>
+          <NuxtLink to="tel:+380995488323" class="contacts-links__item">+380995488323</NuxtLink>
         </div>
         <ul class="socials">
           <li class="socials__item">
