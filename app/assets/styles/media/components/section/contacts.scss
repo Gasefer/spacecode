@@ -3,15 +3,21 @@
 @media #{var.$tablet} {
   .contacts {
     flex-direction: column;
+    gap: 80rem;
     padding-inline: 28rem;
   }
 
   .contacts-info {
-    gap: 40rem;
+    gap: 0;
+  }
+
+  .contacts-text {
+    margin-bottom: 46rem;
   }
 
   .contacts-links {
     gap: 10rem;
+    margin-bottom: 16rem;
     
     &__item {
       min-height: 40rem;

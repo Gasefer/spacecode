@@ -1,21 +1,25 @@
-.prices-section {
-  margin-bottom: 70rem;
-}
+@use "../../../default/base/variables" as var;
 
-.pricelist-card {
-  padding: 40rem 20rem 50rem;
-
-  &__title,
-  &__price {
-    font-size: 20rem;
-    font-weight: 500;
+@media #{var.$tablet} {
+  .prices-section {
+    margin-bottom: 70rem;
   }
 
-  &__text {
-    max-width: none;
-  }
+  .pricelist-card {
+    padding: 40rem 20rem 50rem;
 
-  &__rating {
-    margin-block: 30rem;
+    &__title,
+    &__price {
+      font-size: 20rem;
+      font-weight: 500;
+    }
+
+    &__text {
+      max-width: none;
+    }
+
+    &__rating {
+      margin-block: 30rem;
+    }
   }
 }
