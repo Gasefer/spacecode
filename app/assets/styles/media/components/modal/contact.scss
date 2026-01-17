@@ -1,0 +1,30 @@
+@use "../../../default/base/variables" as var;
+
+@media #{var.$tablet} {
+  .modal {
+    max-width: 328rem;
+    padding: 5rem 12rem 45rem;
+
+    &__header {
+      flex-direction: column-reverse;
+      padding-left: 0;
+      margin-bottom: 30rem;
+    }
+
+    &__title {
+      padding-top: 0;
+      font-size: 20rem;
+    }
+
+    &__close {
+      padding: 6rem 0 10rem 16rem;
+      margin-left: auto;
+    }
+  }
+
+  .contacts-form {
+    &--modal {
+      padding-inline: 0;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@use "../../../default/base/variables" as var;
+
+@media #{var.$tablet} {
+  .process-section {
+    margin-bottom: 124rem;
+  }
+
+  .process-title {
+    margin-bottom: 38rem;
+  }
+
+  .process {
+    gap: 80rem;
+    width: 100%;
+    padding-inline: 28rem;
+
+    &__item {
+      gap: 18rem;
+      width: 100%;
+      min-height: 60rem;
+
+      &:nth-child(odd) {
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .process__label {
+          transform: translateX(20rem);
+        }
+      }
+
+      &:nth-child(even) {
+        margin-left: unset;
+
+        .process__label {
+          transform: translateX(20rem);
+        }
+      }
+
+      &.active {
+        .process__index {
+          color: var(--white);
+        }
+
+        .process__label {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &__index {
+      width: 55rem;
+      height: 55rem;
+      font-size: 28rem;
+    }
+
+    &__label {
+      font-size: 16rem;
+    }
+
+    &__line {
+      top: calc(100% + 10rem);
+    }
+  }
+}
