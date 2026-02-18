@@ -40,7 +40,7 @@ useSwiper(swiperRef, {
   }),
   ...(props.pagination && {
     pagination: {
-      el: ".ui-swiper__pagination",
+      el: `.ui-swiper__pagination-${uniqueId}`,
       type: "bullets",
       clickable: true,
     },
@@ -100,6 +100,7 @@ useSwiper(swiperRef, {
     <div
       v-if="pagination"
       class="ui-swiper__pagination"
+      :class="`ui-swiper__pagination-${uniqueId}`"
     />
   </div>
 </template>

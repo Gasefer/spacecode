@@ -1,0 +1,69 @@
+.benefits-section {
+  margin-bottom: 200rem;
+}
+
+.benefits {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 100rem;
+  padding-block: 100rem;
+  border-left: 1px solid var(--highlight);
+  background-color: var(--bg2);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: var(--highlight);
+  }
+}
+
+.benefits-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30rem;
+  padding-right: 68rem;
+  background-color: var(--bg2);
+
+  &__icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 70rem;
+    height: 70rem;
+    border-radius: 0 30rem 30rem 0;
+    background-color: var(--bg1);
+  }
+
+  &__icon {
+    width: 34rem;
+    height: 24rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    width: 100%;
+    padding: 40rem 20rem;
+    background-color: var(--grey);
+  }
+
+  &__title {
+    font-family: var(--montserrat);
+    font-size: 28rem;
+    font-weight: 500;
+  }
+
+  &__submit {
+    font-family: var(--montserrat);
+    font-size: 20rem;
+  }
+}
