@@ -1,0 +1,11 @@
+@use "../../../default/base/variables" as var;
+
+@media #{var.$tablet} {
+  .video-section {
+    margin-bottom: 100rem;
+  
+    &__block {
+      height: 200rem;
+    }
+  }
+}
