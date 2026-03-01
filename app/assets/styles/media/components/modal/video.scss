@@ -1,0 +1,8 @@
+@use "../../../default/base/variables.scss" as var;
+
+@media #{var.$tablet} {
+  .video-modal {
+    gap: 12rem;
+    padding: 12rem 12rem;
+  }
+}

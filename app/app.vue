@@ -6,7 +6,7 @@ const isContactVisible = ref(false);
 function toggleModal(modal, open) {
   switch (modal) {
     case "contacts":
-      isContactVisible.value = open
+      isContactVisible.value = open;
   }
 
   if (open) {
@@ -18,18 +18,22 @@ function toggleModal(modal, open) {
 </script>
 <template>
   <div class="page-wrapper">
+    <LayoutHeader />
     <main class="main">
       <SectionHero @open-contacts="toggleModal('contacts', true)" />
       <SectionVideo />
-      <SectionBenefits />
-      <SectionStack @open-contacts="toggleModal('contacts', true)"/>
-      <SectionProcess/>
-      <SectionPrices @open-contacts="toggleModal('contacts', true)"/>
-      <SectionContacts/>
+      <SectionBenefits id="benefits" />
+      <SectionStack id="stack" @open-contacts="toggleModal('contacts', true)" />
+      <SectionProcess id="process" />
+      <SectionPrices id="prices" @open-contacts="toggleModal('contacts', true)" />
+      <SectionContacts id="contacts" />
     </main>
-    <LayoutFooter/>
+    <LayoutFooter />
   </div>
-  <ModalWrapper v-show="isContactVisible" @close="toggleModal('contacts', false)">
-    <LazyModalContact @close="toggleModal('contacts', false)"/>
+  <ModalWrapper
+    v-show="isContactVisible"
+    @close="toggleModal('contacts', false)"
+  >
+    <LazyModalContact @close="toggleModal('contacts', false)" />
   </ModalWrapper>
 </template>

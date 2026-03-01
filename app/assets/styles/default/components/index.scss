@@ -12,9 +12,11 @@
 // modal
 @use "modal/wrapper";
 @use "modal/contact";
+@use "modal/video" as modal-video;
 
 // layouts
 @use "layouts/footer";
+@use "layouts/header";
 
 // section
 @use "section/contacts";
