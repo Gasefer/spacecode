@@ -1,0 +1,31 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  font-family: var(--montserrat); 
+
+  &.has-error {
+    .input__field {
+      border-color: red;
+    }
+  }
+
+  &__field {
+    min-height: 50rem;
+    padding: 15rem 8rem 14rem;
+    border-width: 0 0 1px 0;
+    border-color: var(--white);
+    background-color: var(--grey);
+    font-size: 16rem;
+    color: var(--white);
+    transition: border-color 0.15s ease;
+
+    &::placeholder {
+      color: var(--white);
+    }
+  }
+}
+
+.error-text {
+  color: red;
+}

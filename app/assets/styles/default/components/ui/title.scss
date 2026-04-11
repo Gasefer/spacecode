@@ -1,0 +1,21 @@
+.title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 160rem;
+  padding-inline: 143rem 50rem;
+  margin-bottom: 60rem;
+
+  &__star {
+    position: absolute;
+    left: 10rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__text {
+    z-index: 1;
+    font-size: 60rem;
+  }
+}

@@ -1,0 +1,51 @@
+@use "../../../default/base/variables" as var;
+
+@media #{var.$tablet} {
+  .benefits-section {
+    margin-bottom: 70rem;
+  }
+
+  .benefits-card {
+    align-items: stretch;
+    gap: 0;
+    padding-right: 0;
+
+    &__icon-wrapper {
+      width: 64rem;
+      height: auto;
+      border-radius: 0;
+      background-color: transparent;
+    }
+
+    &__icon {
+      width: 24rem;
+      height: 16rem;
+    }
+
+    &__text {
+      gap: 16rem;
+    }
+
+    &__title {
+      font-size: 20rem;
+    }
+
+    &__subtitle {
+      position: relative;
+      padding-left: 20rem;
+      font-size: 14rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 10rem;
+        transform: translate(-50%, -50%);
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: var(--white);
+      }
+    }
+  }
+}

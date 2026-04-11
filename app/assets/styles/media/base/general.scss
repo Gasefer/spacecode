@@ -1,0 +1,22 @@
+@use "../../default/base/variables" as var;
+
+@media #{var.$tablet} {
+  html {
+    font-size: calc(1vw / 3.6);
+  }
+
+  body {
+    font-size: 16rem;
+  }
+
+  .container {
+    padding-inline: 0;
+  }
+
+  .button {
+    min-width: auto;
+    min-height: 40rem;
+    font-size: 16rem;
+    font-weight: 500;
+  }
+}

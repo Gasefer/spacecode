@@ -1,0 +1,44 @@
+.ui-swiper {
+  swiper-slide {
+    width: fit-content;
+    height: auto;
+  }
+
+  &--no-container {
+    overflow: hidden;
+    swiper-container::part(container) {
+      overflow: visible;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 26px;
+    overflow: hidden;
+
+    &--no-container {
+      padding-inline: 26rem;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    width: fit-content;
+    margin: 20rem auto 0;
+
+    .swiper-pagination-bullet {
+      flex-shrink: 0;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background-color: var(--grey);
+      transition: background-color 0.15s ease;
+
+      &-active {
+        background-color: var(--grey2);
+      }
+    }
+  }
+}

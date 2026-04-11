@@ -1,0 +1,7 @@
+@use "../../../default/base/variables" as var;
+
+@media #{var.$tablet} {
+  .logo {
+    font-size: 20rem;
+  }
+}
