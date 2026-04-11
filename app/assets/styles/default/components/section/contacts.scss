@@ -35,6 +35,10 @@
   flex-direction: row;
   gap: 16rem;
 
+  &--header {
+    display: none;
+  }
+
   &__item,
   &__link {
     display: flex;

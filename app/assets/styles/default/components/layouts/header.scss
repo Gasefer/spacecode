@@ -1,0 +1,129 @@
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16rem;
+  width: 100%;
+  padding-block: 16rem;
+  margin-top: 43rem;
+  background-color: var(--grey-opaque);
+  z-index: 10;
+}
+
+.header-nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 70rem;
+  align-items: center;
+}
+
+.header-nav__container,
+.header-links-list,
+.header-socials-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30rem;
+  flex-wrap: wrap;
+}
+
+.header-links-list {
+  &__item {
+    &--mobile-only {
+      display: none;
+    }
+  }
+
+  &__url {
+    text-transform: uppercase;
+  }
+}
+
+.header-contacts-button {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.header-socials-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24rem;
+}
+
+.burger {
+  position: relative;
+  display: none;
+  flex-shrink: 0;
+  width: 24rem;
+  height: 24rem;
+  background-color: transparent;
+
+  &.active {
+    .burger__line {
+      &:nth-child(1) {
+        transform: translate(-50%, 0) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translate(-50%, 0) rotate(-45deg);
+      }
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18rem;
+    height: 2rem;
+    border-radius: 100rem;
+    background-color: var(--white);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    &:nth-child(1) {
+      transform: translate(-50%, -6rem);
+    }
+
+    &:nth-child(2) {
+      transform: translate(-50%, 0);
+    }
+
+    &:nth-child(3) {
+      transform: translate(-50%, 6rem);
+    }
+  }
+}
+
+.hover-link {
+  position: relative;
+
+  &:hover,
+  &.active {
+    color: var(--white);
+
+    &::before {
+      transform: scaleX(1);
+      transform-origin: 0 50%;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: transform 0.2s ease-in-out;
+    border-bottom: 2px solid var(--highlight);
+  }
+}

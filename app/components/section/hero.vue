@@ -2,6 +2,8 @@
 // emits
 const emit = defineEmits(["openContacts"]);
 
+// variables
+const isVideoVisible = ref(false);
 const title = [
   { text: "Створюємо ", highlight: false },
   { text: "системи, ", highlight: true },
@@ -47,7 +49,20 @@ const startTyping = async () => {
   showCursor.value = false;
 };
 
-onMounted(startTyping);
+function toggleVideo(open) {
+  isVideoVisible.value = open;
+
+  if (open) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "unset";
+    startTyping();
+  }
+}
+
+onMounted(() => {
+  toggleVideo(true);
+});
 </script>
 
 <template>
@@ -81,4 +96,5 @@ onMounted(startTyping);
       <hr class="hero__line" />
     </div>
   </div>
+  <LazyModalVideo v-if="isVideoVisible" @close="toggleVideo(false)"/>
 </template>

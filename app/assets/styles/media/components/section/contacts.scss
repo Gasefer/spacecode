@@ -24,4 +24,10 @@
       font-size: 24rem;
     }
   }
+
+  .socials {
+    &--header {
+      display: flex;
+    }
+  }
 }

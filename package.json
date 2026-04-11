@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/fonts": "^0.12.1",
     "@nuxt/image": "^2.0.0",
+    "@nuxtjs/robots": "^6.0.6",
     "nuxt": "^4.2.2",
     "nuxt-swiper": "^2.0.1",
     "scss-reset": "^1.4.6",
