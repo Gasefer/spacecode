@@ -55,18 +55,17 @@
       flex-wrap: nowrap;
       order: 2;
     }
+
+    .encircle-button {
+      order: 1;
+    }
   }
 
-  .header-contacts-button,
   .header-links-list__url {
     font-size: 28rem;
     font-weight: 400;
     text-transform: none;
     text-align: left;
-  }
-
-  .header-contacts-button {
-    order: 1;
   }
 
   .header-links-list {

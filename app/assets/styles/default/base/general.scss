@@ -9,7 +9,7 @@ body {
   font-size: 20rem;
   font-style: normal;
   font-weight: 400;
-  background-color: var(--bg1);
+  background-color: #000;
   color: var(--white)
 }
 
@@ -50,6 +50,7 @@ a {
 
 .button {
   position: relative;
+  display: block;
   min-width: 230rem;
   min-height: 60rem;
   background-color: transparent;
@@ -73,6 +74,10 @@ a {
 
   &--right {
     margin-left: auto;
+  }
+
+  &--center {
+    margin-inline: auto;
   }
 }
 

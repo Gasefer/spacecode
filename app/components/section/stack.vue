@@ -1,7 +1,4 @@
 <script setup>
-// emits
-const emit = defineEmits(["openContacts"]);
-
 //variables
 const stack = [
   "PYTHON",
@@ -32,10 +29,5 @@ const stack = [
         </li>
       </ul>
     </UiMarquee>
-    <div class="container stack__btn-wrapper">
-      <button class="button button--right" @click="emit('openContacts')">
-        Консультуватись
-      </button>
-    </div>
   </section>
 </template>

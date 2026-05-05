@@ -20,6 +20,11 @@
     background-color: var(--grey);
     font-family: var(--montserrat);
     text-align: center;
+    transition: transform 1s ease-out;
+
+    &:hover {
+      transform: translateY(-20rem);
+    }
 
     &__title,
     &__price {
