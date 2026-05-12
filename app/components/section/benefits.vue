@@ -1,4 +1,7 @@
 <script setup>
+// emits
+const emit = defineEmits(["openContacts"]);
+
 // global variables
 const { windowWidth } = useWindowWidth();
 
@@ -90,5 +93,10 @@ const swiperOptions = {
         </div>
       </template>
     </UiSwiper>
+    <div class="container stack__btn-wrapper">
+      <button class="button button--center" @click="emit('openContacts')">
+        Консультуватись
+      </button>
+    </div>
   </section>
 </template>
