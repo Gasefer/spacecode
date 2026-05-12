@@ -8,6 +8,10 @@
   .pricelist-card {
     padding: 40rem 20rem 50rem;
 
+    &:hover {
+      transform: translateY(0);
+    }
+
     &__title,
     &__price {
       font-size: 20rem;

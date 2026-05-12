@@ -1,0 +1,14 @@
+@use "../../../default/base/variables" as var;
+
+@media #{var.$tablet} {
+  .encircle-button {
+    font-size: 28rem;
+    font-weight: 400;
+    text-transform: none;
+    text-align: left;
+
+    &__icon {
+      display: none;
+    }
+  }
+}

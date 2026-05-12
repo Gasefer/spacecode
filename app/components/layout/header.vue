@@ -61,9 +61,6 @@ onMounted(() => {
       <div class="header-nav">
         <div class="header-nav__container">
           <ul class="header-links-list">
-            <li class="header-links-list__item header-links-list__item--mobile-only">
-              <button class="header-contacts-button highlight">Замовити проєкт</button>
-            </li>
             <li
               v-for="link in links"
               :key="link.id"
@@ -81,13 +78,13 @@ onMounted(() => {
           </ul>
           <div class="header-socials-wrapper">
             <div class="header-socials-links">
-              <NuxtLink
+              <!-- <NuxtLink
                 to="mailto:email@com.ua"
                 class="header-socials-links__item hover-link"
                 @click="toggleMobileMenu(false)"
               >
                 email@com.ua
-              </NuxtLink>
+              </NuxtLink> -->
               <NuxtLink 
                 to="tel:+380995488323" 
                 class="header-socials-links__item hover-link" 
@@ -115,7 +112,7 @@ onMounted(() => {
           </ul>
           </div>
         </div>
-        <button class="header-contacts-button highlight" @click="toggleMobileMenu(false)">Замовити проєкт</button>
+        <UiEncircleButton @click="toggleMobileMenu(false)">Замовити проєкт</UiEncircleButton>
       </div>
     </nav>
     <button 
