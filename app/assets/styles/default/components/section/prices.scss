@@ -24,6 +24,10 @@
 
     &:hover {
       transform: translateY(-20rem);
+
+      .pricelist-card__icon {
+        fill: var(--highlight);
+      }
     }
 
     &__title,
@@ -48,6 +52,8 @@
     &__icon {
       width: 60rem;
       height: 60rem;
+      fill: transparent;
+      transition: fill 0.3s ease-out;
     }
   }
 }
