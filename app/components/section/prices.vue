@@ -5,27 +5,13 @@ const { windowWidth } = useWindowWidth();
 // emits
 const emit = defineEmits(["openContacts"]);
 
-// variables
-const slides = [
-  {
-    title: "Малий проєкт",
-    text: "вілвіловівоіо лвоілоіл іофлололіоліоооліоіфі ячячя ячяч яччячя ячя",
-    rating: 1,
-    price: "від 5000 грн",
+// props
+defineProps({
+  data: {
+    type: Object,
+    required: true,
   },
-  {
-    title: "Середній проєкт",
-    text: "вілвіловівоіо лвоілоіл іофлололіоліоооліоіфі ячячя ячяч яччячя ячя",
-    rating: 2,
-    price: "від 7000 грн",
-  },
-  {
-    title: "Enterprise/кастом",
-    text: "вілвіловівоіо лвоілоіл іофлололіоліоооліоіфі ячячя ячяч яччячя ячя",
-    rating: 3,
-    price: "від 10 000 грн",
-  },
-];
+});
 
 const swiperOptions = {
   slidesPerView: 1,
@@ -34,23 +20,26 @@ const swiperOptions = {
 </script>
 <template>
   <section class="container prices-section">
-    <UiTitle>Наші ціни</UiTitle>
+    <UiTitle v-if="data?.title?.title">
+      {{ data.title.title }}
+    </UiTitle>
+    <template v-if="data?.cardlist?.items?.['cardlist-item']?.length">
     <template v-if="windowWidth > 1024">
       <ul class="pricelist">
         <li
-          v-for="(slide, index) in slides"
+          v-for="(slide, index) in data.cardlist.items['cardlist-item']"
           :key="`pricelist-card-${index}`"
           class="pricelist-card"
         >
-          <h3 class="pricelist-card__title">
+          <h3 v-if="slide?.title" class="pricelist-card__title">
             {{ slide.title }}
           </h3>
-          <p class="pricelist-card__text">
-            {{ slide.text }}
+          <p v-if="slide?.subtitle" class="pricelist-card__text">
+            {{ slide.subtitle }}
           </p>
           <div class="pricelist-card__rating">
             <UiIcon
-              v-for="(star, index) in slide.rating"
+              v-for="star in index + 1"
               :key="`pricelist-card-rating-${star}`"
               custom-class="pricelist-card__icon"
               name="star"
@@ -58,34 +47,31 @@ const swiperOptions = {
               height="60"
             />
           </div>
-          <span class="pricelist-card__price">
+          <span v-if="slide?.price" class="pricelist-card__price">
             {{ slide.price }}
           </span>
         </li>
       </ul>
-      <button class="button button--right" @click="emit('openContacts')">
-        Консультуватись
-      </button>
     </template>
     <UiSwiper
       v-else
       custom-class="pricelist-swiper"
-      :slides="slides"
+      :slides="data.cardlist.items['cardlist-item']"
       :options="swiperOptions"
       no-container
       pagination
     >
-      <template #slide="{ slideData }">
+      <template #slide="{ slideData, index }">
         <div class="pricelist-card">
-          <h3 class="pricelist-card__title">
+          <h3 v-if="slideData?.title" class="pricelist-card__title">
             {{ slideData.title }}
           </h3>
-          <p class="pricelist-card__text">
-            {{ slideData.text }}
+          <p v-if="slideData?.subtitle" class="pricelist-card__text">
+            {{ slideData.subtitle }}
           </p>
           <div class="pricelist-card__rating">
             <UiIcon
-              v-for="(star, index) in slideData.rating"
+              v-for="star in index + 1"
               :key="`pricelist-card-rating-slide-${star}`"
               custom-class="pricelist-card__icon"
               name="star"
@@ -93,11 +79,12 @@ const swiperOptions = {
               height="60"
             />
           </div>
-          <span class="pricelist-card__price">
+          <span v-if="slideData?.price" class="pricelist-card__price">
             {{ slideData.price }}
           </span>
         </div>
       </template>
     </UiSwiper>
+    </template>
   </section>
 </template>

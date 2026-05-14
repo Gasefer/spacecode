@@ -1,9 +1,17 @@
-<script setup></script>
+<script setup>
+// props
+defineProps({
+  data: {
+    type: Object,
+    required: true,
+  },
+});
+</script>
 <template>
   <div class="video-section container">
-    <div class="video-section__block">
+    <div v-if="data?.video?.video" class="video-section__block">
       <video class="image-cover" autoplay muted playsinline loop>
-        <source src="/videos/DELETE-video2.mp4" type="video/mp4" />
+        <source :src="data.video.video" type="video/mp4" />
       </video>
     </div>
   </div>

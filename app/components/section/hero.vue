@@ -2,15 +2,27 @@
 // emits
 const emit = defineEmits(["openContacts"]);
 
+// props
+const props = defineProps({
+  data: {
+    type: Object,
+    required: true,
+  },
+  videoData: {
+    type: Object,
+  },
+});
+
 // variables
 const isVideoVisible = ref(false);
-const title = [
-  { text: "Створюємо ", highlight: false },
-  { text: "системи, ", highlight: true },
-  { text: "які ", highlight: false },
-  { text: "працюють ", highlight: true },
-  { text: "без компромісів.", highlight: false },
-];
+// const title = [
+//   { text: "Створюємо ", highlight: false },
+//   { text: "системи, ", highlight: true },
+//   { text: "які ", highlight: false },
+//   { text: "працюють ", highlight: true },
+//   { text: "без компромісів.", highlight: false },
+// ];
+const title = [{ text: props.data?.title?.title || "", highlight: false }];
 
 const currentLength = ref(0);
 const showCursor = ref(true); // Controls visibility of the cursor
@@ -61,12 +73,16 @@ function toggleVideo(open) {
 }
 
 onMounted(() => {
-  toggleVideo(true);
+  if (props.videoData?.["video-button"]?.video) {
+    toggleVideo(true);
+  } else {
+    startTyping();
+  }
 });
 </script>
 
 <template>
-  <div class="hero container">
+  <section class="hero container">
     <UiIcon
       name="hero-star"
       custom-class="hero__star"
@@ -90,11 +106,15 @@ onMounted(() => {
     </div>
 
     <div class="hero__button-wrapper">
-      <button class="button hero__button" @click="emit('openContacts')">
-        Консультуватись
+      <button v-if="data?.button?.text" class="button hero__button" @click="emit('openContacts')">
+        {{ data.button.text }}
       </button>
       <hr class="hero__line" />
     </div>
-  </div>
-  <LazyModalVideo v-if="isVideoVisible" @close="toggleVideo(false)"/>
+  </section>
+  <LazyModalVideo
+    v-if="isVideoVisible"
+    :data="videoData"
+    @close="toggleVideo(false)"
+  />
 </template>

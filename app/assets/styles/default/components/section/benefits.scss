@@ -28,6 +28,7 @@
   flex-direction: row;
   align-items: center;
   gap: 30rem;
+  height: 100%;
   padding-right: 68rem;
   background-color: var(--bg2);
 
@@ -53,6 +54,7 @@
     flex-direction: column;
     gap: 20rem;
     width: 100%;
+    height: 100%;
     padding: 40rem 20rem;
     background-color: var(--grey);
   }

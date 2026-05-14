@@ -14,8 +14,14 @@
 .marquee-list {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 50rem;
   padding: 32rem 0 32rem 50rem;
   font-family: var(--montserrat);
   font-size: 28rem;
+
+  &__image {
+    height: 75rem;
+    width: auto;
+  }
 }
